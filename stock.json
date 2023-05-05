@@ -1,0 +1,18 @@
+{
+    "Gildan": {
+        "Short Sleeve Adult T-shirt": {
+            "M": {
+                "Black": {
+                    "width": "931.44mm",
+                    "hex": "#000000",
+                    "src": "gildan_adult_M_black.png"
+                },
+                "Royal Blue": {
+                    "width": "931.44mm",
+                    "hex": "#0000FF",
+                    "src": "gildan_adult_M_royal-blue.png"
+                }
+            }
+        }
+    }
+}

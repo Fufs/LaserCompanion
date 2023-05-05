@@ -1,0 +1,31 @@
+#preview {
+    background-color: red;
+}
+
+#sidebar {
+    background-color: green;
+}
+
+.sidebar-section {
+    background-color: blue;
+}
+
+#closePopupButton {
+    background-color: magenta;
+}
+
+#closePopupButton:hover {
+    background-color: rgba(255,0,255,0.5);
+}
+
+.spinner {
+    background-color: yellow;
+}
+
+.spinner-innerCircle {
+    background-color: yellow;
+}
+
+#popup a {
+    background-color: cyan;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>T-Designer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/debug.css" />
+</head>
+<body>
+    <!-- Preview pane -->
+    <div id="preview">
+        <div id="canvas">
+            <img id="stockImage"/>
+            <div id="svgContainer" style="left: 0px; top: 0px;"></div>
+            <div id="dragOverlay" class="dragDisabled"></div>
+        </div>
+    </div>
+    <!-- Options sidebar -->
+    <div id="sidebar">
+        <!-- Stock section -->
+        <div class="sidebar-section">
+            <h2 class="section-item">Select your Stock</h2>
+            <select id="stock-manufacturer-select" class="section-item" disabled>
+                <option value>Select Manufacturer</option>
+                <option value disabled>---</option>
+            </select>
+            <select id="stock-name-select" class="section-item" disabled>
+                <option value>Select Product</option>
+                <option value disabled>---</option>
+            </select>
+            <select id="stock-size-select" class="section-item" disabled>
+                <option value>Select Size</option>
+                <option value disabled>---</option>
+            </select>
+            <select id="stock-color-select" class="section-item" disabled>
+                <option value>Select Color</option>
+                <option value disabled>---</option>
+            </select>
+        </div>
+        <!-- SVG section -->
+        <div class="sidebar-section">
+            <h2 class="section-item">Upload your design</h2>
+            <input type="file" id="svgUpload" class="section-item" accept=".svg" disabled />
+        </div>
+        <!-- Align section -->
+        <div class="sidebar-section">
+            <h2 class="section-item">Align</h2>
+            <span class="section-item">
+                <button disabled>Top Left</button>
+                <button disabled>Top Center</button>
+                <button disabled>Top Right</button>
+            </span>
+            <span class="section-item">
+                <button disabled>Center Left</button>
+                <button disabled>Center Center</button>
+                <button disabled>Center Right</button>
+            </span>
+            <span class="section-item">
+                <button disabled>Bottom Left</button>
+                <button disabled>Bottom Center</button>
+                <button disabled>Bottom Right</button>
+            </span>
+        </div>
+        <!-- Resize section -->
+        <div class="sidebar-section">
+            <h2 class="section-item">Resize</h2>
+            <span class="section-item">
+                <label for="svgScaleRange">Scale</label>
+                <input type="range" id="svgScaleRange" min="1" max="1000" step="1" value="100" />
+                <input type="number" id="svgScaleNumber" value="100" />
+            </span>
+            <span class="section-item">
+                <label for="svgWidthNumber">Dimensions</label>
+                <input type="number" id="svgWidthNumber" value="100" disabled />
+                <label for="svgHeightNumber">x</label>
+                <input type="number" id="svgHeightNumber" value="100" disabled />
+            </span>
+            <span class="section-item">
+                <label for="svgUnitsSelect">Units</label>
+                <select id="svgUnitsSelect" disabled>
+                    <option selected>mm</option>
+                    <option>cm</option>
+                    <option>in</option>
+                    <option>pt</option>
+                    <option>pc</option>
+                    <option>px</option>
+                </select>
+            </span>
+        </div>
+        <!-- View Section -->
+        <div class="sidebar-section">
+            <h2 class="section-item">View options</h2>
+            <span class="section-item">
+                <label for="showSVGByFill">Show paths filled with</label>
+                <select id="showSVGByFill" disabled>
+                    <option selected>All</option>
+                </select>
+            </span>
+            <span class="section-item">
+                <label for="mirrorViewHCheckbox">Mirror Horizontally</label>
+                <input type="checkbox" id="mirrorViewHCheckbox" />
+            </span>
+            <span class="section-item">
+                <label for="mirrorViewVCheckbox">Mirror Vertically</label>
+                <input type="checkbox" id="mirrorViewVCheckbox" disabled />
+            </span>
+            <span class="section-item">
+                <label for="xrayCheckbox">X-Ray</label>
+                <input type="checkbox" id="xrayCheckbox" />
+            </span>
+            <span class="section-item">
+                <label for="documentOutlineCheckbox">Document Outline</label>
+                <input type="checkbox" id="documentOutlineCheckbox" />
+            </span>
+        </div>
+        <!-- Export section -->
+        <div class="sidebar-section">
+            <h2 class="section-item">Export</h2>
+            <span class="section-item">
+                <label for="splitSVGByFillCheckbox">Split SVG by fill</label>
+                <input type="checkbox" id="splitSVGByFillCheckbox" disabled />
+            </span>
+            <span class="section-item">
+                <label for="mirrorSVGCheckbox" checked>Mirror SVG</label>
+                <input type="checkbox" id="mirrorSVGCheckbox" />
+            </span>
+            <span class="section-item">
+                <label for="svgMarginNumber">Margin on exported SVG</label>
+                <input type="margin" id="svgMarginNumber" disabled />
+            </span>
+            <span class="section-item">
+                <label for="exportTypeSelect">Export as</label>
+                <select type="checkbox" id="exportTypeSelect">
+                    <option>SVG</option>
+                    <option>PDF</option>
+                </select>
+            </span>
+            <button id="generateButton" disabled>Generate</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="https://unpkg.com/xml-js@1.6.11/dist/xml-js.min.js"></script>
+    <script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/svg2pdf.js@2.2.1/dist/svg2pdf.umd.min.js"></script>
+    <script src="js/unitConvertions.js"></script>
+    <script src="js/canvasPreview.js"></script>
+
+    <!-- End -->
+</body>
+</html> 

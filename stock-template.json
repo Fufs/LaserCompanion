@@ -1,0 +1,13 @@
+{
+    "MANUFACTURER": {
+        "PRODUCT-NAME": {
+            "SIZE": {
+                "COLOR": {
+                    "width": "WIDTH OF THE ENTIRE IMAGE WITH UNIT",
+                    "hex": "COLOR HEX CODE",
+                    "src": "URL OF IMAGE"
+                }
+            }
+        }
+    }
+}
